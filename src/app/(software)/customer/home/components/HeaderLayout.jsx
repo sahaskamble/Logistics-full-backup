@@ -36,7 +36,7 @@ export default function HeaderLayout({ currentService, setCurrentService, user }
 	}, [])
 
 	return (
-		<header>
+		<header className="bg-background">
 			{/* Original navigation bar content */}
 			<div className={`bg-[var(--background)] 
 				${displayAfterHeader ? "opacity-0" : "opacity-100"}
@@ -67,7 +67,7 @@ export default function HeaderLayout({ currentService, setCurrentService, user }
 											title={'Logout'}
 											icon={<LogOutIcon size={20} />}
 											iconPosition="right"
-											className="rounded-md bg-red-600 hover:bg-red-700 text-white"
+											className="rounded-md text-white"
 											onClick={handleLogout}
 										/>
 									</>
@@ -96,7 +96,7 @@ export default function HeaderLayout({ currentService, setCurrentService, user }
 				</div>
 
 				{/* Services List */}
-				<div className={`bg-[var(--accent)] py-3 px-4 rounded-xl mx-auto w-xl flex justify-between items-center shadow-md border border-gray-200 opacity-100`}>
+				<div className={`bg-background py-3 px-4 rounded-xl mx-auto w-xl flex justify-between items-center shadow-md border border-gray-200 opacity-100`}>
 					<div className="flex justify-center space-x-12 flex-1">
 						{servicesList.map((item) => (
 							<Button
@@ -157,7 +157,7 @@ export default function HeaderLayout({ currentService, setCurrentService, user }
 									title={'Logout'}
 									icon={<LogOutIcon size={16} />}
 									iconPosition="right"
-									className="rounded-md bg-red-600 hover:bg-red-700 text-white text-xs px-2 py-1"
+									className="rounded-md text-white text-xs px-2 py-1"
 									onClick={handleLogout}
 								/>
 							</div>
